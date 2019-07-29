@@ -1,0 +1,44 @@
+Nov 07 18:53:26.501 HYPERVISOR: Release 0.2.14-x86/Windows (tag 2014092320)
+Nov 07 18:53:26.503 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 51243.
+Nov 07 18:53:27.026 HYPERVISOR: exec_cmd: hypervisor version 
+Nov 07 18:53:27.057 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\lizheng\GNS3\projects\16c5a061-2106-45b8-b899-dbbb613f26fd\project-files\dynamips 
+Nov 07 18:53:27.057 GENERAL: working_dir=C:\Users\lizheng\GNS3\projects\16c5a061-2106-45b8-b899-dbbb613f26fd\project-files\dynamips
+Nov 07 18:53:27.074 HYPERVISOR: exec_cmd: vm create R5 6 c3600 
+Nov 07 18:53:27.080 VM: VM R5 created.
+Nov 07 18:53:27.096 HYPERVISOR: exec_cmd: vm set_con_tcp_port R5 5004 
+Nov 07 18:53:27.114 HYPERVISOR: exec_cmd: c3600 get_mac_addr R5 
+Nov 07 18:53:27.127 HYPERVISOR: exec_cmd: vm set_ios R5 C:/Users/lizheng/GNS3/images/IOS/c3640-jk9o3s-mz.124-12.bin 
+Nov 07 18:53:27.140 HYPERVISOR: exec_cmd: vm get_status R5 
+Nov 07 18:53:27.152 HYPERVISOR: exec_cmd: vm slot_add_binding R5 1 0 NM-4T 
+Nov 07 18:53:27.165 HYPERVISOR: exec_cmd: vm get_status R5 
+Nov 07 18:53:27.177 HYPERVISOR: exec_cmd: vm slot_add_binding R5 0 0 NM-4E 
+Nov 07 18:53:27.192 HYPERVISOR: exec_cmd: vm get_status R5 
+Nov 07 18:53:27.205 HYPERVISOR: exec_cmd: vm set_idle_pc R5 0x605a4fd0 
+Nov 07 18:53:27.221 HYPERVISOR: exec_cmd: vm set_ram R5 192 
+Nov 07 18:53:27.233 HYPERVISOR: exec_cmd: vm set_exec_area R5 64 
+Nov 07 18:53:27.246 HYPERVISOR: exec_cmd: vm set_nvram R5 256 
+Nov 07 18:53:27.262 HYPERVISOR: exec_cmd: vm set_config R5 configs/i6_startup-config.cfg 
+Nov 07 18:54:03.712 HYPERVISOR: exec_cmd: nio create_udp udp-23bdc08d-2508-4d4e-ae4a-987a121c5f9b 10001 127.0.0.1 10000 
+Nov 07 18:54:03.738 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R5 1 0 udp-23bdc08d-2508-4d4e-ae4a-987a121c5f9b 
+Nov 07 18:54:03.765 HYPERVISOR: exec_cmd: vm get_status R5 
+Nov 07 18:54:09.050 HYPERVISOR: exec_cmd: nio create_udp udp-3230e5f1-4328-40f6-86e6-d6b50a380f5f 10006 127.0.0.1 10007 
+Nov 07 18:54:09.084 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R5 1 1 udp-3230e5f1-4328-40f6-86e6-d6b50a380f5f 
+Nov 07 18:54:09.109 HYPERVISOR: exec_cmd: vm get_status R5 
+Nov 07 18:54:18.768 HYPERVISOR: exec_cmd: vm set_ghost_status R5 2 
+Nov 07 18:54:18.780 HYPERVISOR: exec_cmd: vm set_ghost_file R5 c3640-jk9o3s-mz.124-12.bin-192.ghost 
+Nov 07 18:54:18.793 HYPERVISOR: exec_cmd: vm get_status R5 
+Nov 07 18:54:18.806 HYPERVISOR: exec_cmd: vm start R5 
+Nov 07 20:43:24.393 HYPERVISOR: exec_cmd: vm get_status R5 
+Nov 07 20:43:24.478 HYPERVISOR: exec_cmd: vm stop R5 
+Nov 07 20:43:24.587 VM: VM R5 shutdown.
+Nov 07 20:43:24.608 HYPERVISOR: exec_cmd: vm extract_config R5 
+Nov 07 20:43:50.479 HYPERVISOR: exec_cmd: hypervisor working_dir C:/Users/lizheng/Desktop/隧道\project-files\dynamips 
+Nov 07 20:43:50.480 GENERAL: working_dir=C:/Users/lizheng/Desktop/隧道\project-files\dynamips
+Nov 07 20:43:50.668 HYPERVISOR: exec_cmd: vm extract_config R5 
+Nov 07 20:44:41.896 HYPERVISOR: exec_cmd: vm get_status R5 
+Nov 07 20:44:41.968 HYPERVISOR: exec_cmd: vm extract_config R5 
+Nov 07 20:44:42.049 HYPERVISOR: exec_cmd: vm delete R5 
+Nov 07 20:44:42.049 VM: VM R5 destroyed.
+Nov 07 20:44:42.113 HYPERVISOR: exec_cmd: hypervisor stop 
+Nov 07 20:44:42.473 HYPERVISOR: Stopped.
+Nov 07 20:44:42.473 GENERAL: reset done.

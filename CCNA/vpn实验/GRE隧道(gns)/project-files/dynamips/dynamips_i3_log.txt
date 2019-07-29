@@ -1,0 +1,54 @@
+Nov 07 17:25:28.577 HYPERVISOR: Release 0.2.14-x86/Windows (tag 2014092320)
+Nov 07 17:25:28.578 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 50543.
+Nov 07 17:25:28.604 HYPERVISOR: exec_cmd: hypervisor version 
+Nov 07 17:25:28.618 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\lizheng\GNS3\projects\16c5a061-2106-45b8-b899-dbbb613f26fd\project-files\dynamips 
+Nov 07 17:25:28.618 GENERAL: working_dir=C:\Users\lizheng\GNS3\projects\16c5a061-2106-45b8-b899-dbbb613f26fd\project-files\dynamips
+Nov 07 17:25:28.635 HYPERVISOR: exec_cmd: vm create R2 3 c3600 
+Nov 07 17:25:28.638 VM: VM R2 created.
+Nov 07 17:25:28.648 HYPERVISOR: exec_cmd: vm set_con_tcp_port R2 5001 
+Nov 07 17:25:28.663 HYPERVISOR: exec_cmd: c3600 get_mac_addr R2 
+Nov 07 17:25:28.678 HYPERVISOR: exec_cmd: vm set_ios R2 C:/Users/lizheng/GNS3/images/IOS/c3640-jk9o3s-mz.124-12.bin 
+Nov 07 17:25:28.701 HYPERVISOR: exec_cmd: vm get_status R2 
+Nov 07 17:25:28.714 HYPERVISOR: exec_cmd: vm slot_add_binding R2 1 0 NM-4T 
+Nov 07 17:25:28.729 HYPERVISOR: exec_cmd: vm get_status R2 
+Nov 07 17:25:28.746 HYPERVISOR: exec_cmd: vm slot_add_binding R2 0 0 NM-4E 
+Nov 07 17:25:28.763 HYPERVISOR: exec_cmd: vm get_status R2 
+Nov 07 17:25:28.778 HYPERVISOR: exec_cmd: vm set_idle_pc R2 0x605a4fd0 
+Nov 07 17:25:28.794 HYPERVISOR: exec_cmd: vm set_ram R2 192 
+Nov 07 17:25:28.807 HYPERVISOR: exec_cmd: vm set_exec_area R2 64 
+Nov 07 17:25:28.820 HYPERVISOR: exec_cmd: vm set_nvram R2 256 
+Nov 07 17:25:28.834 HYPERVISOR: exec_cmd: vm set_config R2 configs/i3_startup-config.cfg 
+Nov 07 17:25:46.608 HYPERVISOR: exec_cmd: vm set_ghost_status R2 2 
+Nov 07 17:25:46.634 HYPERVISOR: exec_cmd: vm set_ghost_file R2 c3640-jk9o3s-mz.124-12.bin-192.ghost 
+Nov 07 17:25:46.647 HYPERVISOR: exec_cmd: vm get_status R2 
+Nov 07 17:25:46.661 HYPERVISOR: exec_cmd: vm start R2 
+Nov 07 17:26:18.578 HYPERVISOR: exec_cmd: nio create_udp udp-627bbaa7-447f-42d9-8298-b9b38ff6721f 10001 127.0.0.1 10000 
+Nov 07 17:26:18.602 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 1 0 udp-627bbaa7-447f-42d9-8298-b9b38ff6721f 
+Nov 07 17:26:18.628 HYPERVISOR: exec_cmd: vm get_status R2 
+Nov 07 17:26:18.654 HYPERVISOR: exec_cmd: vm slot_enable_nio R2 1 0 
+Nov 07 17:26:25.488 HYPERVISOR: exec_cmd: nio create_udp udp-39486f2d-ff52-4c5f-811a-a06b12a760ad 10004 127.0.0.1 10005 
+Nov 07 17:26:25.520 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 0 0 udp-39486f2d-ff52-4c5f-811a-a06b12a760ad 
+Nov 07 17:26:25.549 HYPERVISOR: exec_cmd: vm get_status R2 
+Nov 07 17:26:25.578 HYPERVISOR: exec_cmd: vm slot_enable_nio R2 0 0 
+Nov 07 18:53:55.598 HYPERVISOR: exec_cmd: vm get_status R2 
+Nov 07 18:53:55.620 HYPERVISOR: exec_cmd: vm slot_disable_nio R2 1 0 
+Nov 07 18:53:55.639 HYPERVISOR: exec_cmd: vm slot_remove_nio_binding R2 1 0 
+Nov 07 18:53:55.664 HYPERVISOR: exec_cmd: nio delete udp-627bbaa7-447f-42d9-8298-b9b38ff6721f 
+Nov 07 18:54:09.065 HYPERVISOR: exec_cmd: nio create_udp udp-6050b270-b29f-4617-b739-53fc5a540428 10007 127.0.0.1 10006 
+Nov 07 18:54:09.092 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 1 0 udp-6050b270-b29f-4617-b739-53fc5a540428 
+Nov 07 18:54:09.117 HYPERVISOR: exec_cmd: vm get_status R2 
+Nov 07 18:54:09.150 HYPERVISOR: exec_cmd: vm slot_enable_nio R2 1 0 
+Nov 07 20:43:24.431 HYPERVISOR: exec_cmd: vm get_status R2 
+Nov 07 20:43:24.507 HYPERVISOR: exec_cmd: vm stop R2 
+Nov 07 20:43:24.655 VM: VM R2 shutdown.
+Nov 07 20:43:24.746 HYPERVISOR: exec_cmd: vm extract_config R2 
+Nov 07 20:43:50.618 HYPERVISOR: exec_cmd: hypervisor working_dir C:/Users/lizheng/Desktop/隧道\project-files\dynamips 
+Nov 07 20:43:50.619 GENERAL: working_dir=C:/Users/lizheng/Desktop/隧道\project-files\dynamips
+Nov 07 20:43:50.727 HYPERVISOR: exec_cmd: vm extract_config R2 
+Nov 07 20:44:41.876 HYPERVISOR: exec_cmd: vm get_status R2 
+Nov 07 20:44:41.947 HYPERVISOR: exec_cmd: vm extract_config R2 
+Nov 07 20:44:42.017 HYPERVISOR: exec_cmd: vm delete R2 
+Nov 07 20:44:42.017 VM: VM R2 destroyed.
+Nov 07 20:44:42.093 HYPERVISOR: exec_cmd: hypervisor stop 
+Nov 07 20:44:42.474 HYPERVISOR: Stopped.
+Nov 07 20:44:42.475 GENERAL: reset done.

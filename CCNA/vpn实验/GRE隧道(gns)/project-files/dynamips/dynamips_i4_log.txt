@@ -1,0 +1,42 @@
+Nov 07 17:25:29.918 HYPERVISOR: Release 0.2.14-x86/Windows (tag 2014092320)
+Nov 07 17:25:29.919 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 50545.
+Nov 07 17:25:29.960 HYPERVISOR: exec_cmd: hypervisor version 
+Nov 07 17:25:29.977 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\lizheng\GNS3\projects\16c5a061-2106-45b8-b899-dbbb613f26fd\project-files\dynamips 
+Nov 07 17:25:29.978 GENERAL: working_dir=C:\Users\lizheng\GNS3\projects\16c5a061-2106-45b8-b899-dbbb613f26fd\project-files\dynamips
+Nov 07 17:25:29.991 HYPERVISOR: exec_cmd: vm create R3 4 c3600 
+Nov 07 17:25:29.997 VM: VM R3 created.
+Nov 07 17:25:30.033 HYPERVISOR: exec_cmd: vm set_con_tcp_port R3 5002 
+Nov 07 17:25:30.050 HYPERVISOR: exec_cmd: c3600 get_mac_addr R3 
+Nov 07 17:25:30.064 HYPERVISOR: exec_cmd: vm set_ios R3 C:/Users/lizheng/GNS3/images/IOS/c3640-jk9o3s-mz.124-12.bin 
+Nov 07 17:25:30.079 HYPERVISOR: exec_cmd: vm get_status R3 
+Nov 07 17:25:30.091 HYPERVISOR: exec_cmd: vm slot_add_binding R3 1 0 NM-4T 
+Nov 07 17:25:30.107 HYPERVISOR: exec_cmd: vm get_status R3 
+Nov 07 17:25:30.120 HYPERVISOR: exec_cmd: vm slot_add_binding R3 0 0 NM-4E 
+Nov 07 17:25:30.136 HYPERVISOR: exec_cmd: vm get_status R3 
+Nov 07 17:25:30.150 HYPERVISOR: exec_cmd: vm set_idle_pc R3 0x605a4fd0 
+Nov 07 17:25:30.171 HYPERVISOR: exec_cmd: vm set_ram R3 192 
+Nov 07 17:25:30.185 HYPERVISOR: exec_cmd: vm set_exec_area R3 64 
+Nov 07 17:25:30.200 HYPERVISOR: exec_cmd: vm set_nvram R3 256 
+Nov 07 17:25:30.222 HYPERVISOR: exec_cmd: vm set_config R3 configs/i4_startup-config.cfg 
+Nov 07 17:25:46.493 HYPERVISOR: exec_cmd: vm set_ghost_status R3 2 
+Nov 07 17:25:46.518 HYPERVISOR: exec_cmd: vm set_ghost_file R3 c3640-jk9o3s-mz.124-12.bin-192.ghost 
+Nov 07 17:25:46.538 HYPERVISOR: exec_cmd: vm get_status R3 
+Nov 07 17:25:46.565 HYPERVISOR: exec_cmd: vm start R3 
+Nov 07 17:26:25.502 HYPERVISOR: exec_cmd: nio create_udp udp-ce84d14a-1f13-4198-a1f6-09baef13be08 10005 127.0.0.1 10004 
+Nov 07 17:26:25.528 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R3 0 0 udp-ce84d14a-1f13-4198-a1f6-09baef13be08 
+Nov 07 17:26:25.560 HYPERVISOR: exec_cmd: vm get_status R3 
+Nov 07 17:26:25.586 HYPERVISOR: exec_cmd: vm slot_enable_nio R3 0 0 
+Nov 07 20:43:24.500 HYPERVISOR: exec_cmd: vm get_status R3 
+Nov 07 20:43:24.532 HYPERVISOR: exec_cmd: vm stop R3 
+Nov 07 20:43:24.654 VM: VM R3 shutdown.
+Nov 07 20:43:24.739 HYPERVISOR: exec_cmd: vm extract_config R3 
+Nov 07 20:43:50.528 HYPERVISOR: exec_cmd: hypervisor working_dir C:/Users/lizheng/Desktop/隧道\project-files\dynamips 
+Nov 07 20:43:50.528 GENERAL: working_dir=C:/Users/lizheng/Desktop/隧道\project-files\dynamips
+Nov 07 20:43:50.630 HYPERVISOR: exec_cmd: vm extract_config R3 
+Nov 07 20:44:41.883 HYPERVISOR: exec_cmd: vm get_status R3 
+Nov 07 20:44:41.954 HYPERVISOR: exec_cmd: vm extract_config R3 
+Nov 07 20:44:42.026 HYPERVISOR: exec_cmd: vm delete R3 
+Nov 07 20:44:42.026 VM: VM R3 destroyed.
+Nov 07 20:44:42.100 HYPERVISOR: exec_cmd: hypervisor stop 
+Nov 07 20:44:42.234 HYPERVISOR: Stopped.
+Nov 07 20:44:42.234 GENERAL: reset done.
