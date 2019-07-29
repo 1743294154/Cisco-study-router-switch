@@ -1,0 +1,44 @@
+en
+conference terminal
+vlan 10
+name lizheng
+exit
+int vlan 10
+no shut
+int fa0/1
+no shut
+switchport mode access 
+switchport access vlan 10
+
+end
+
+conf t
+vlan 30
+name zhengli
+exit
+int vlan 30
+no shut
+int fa0/2
+switchport mode access
+switchport access vlan 30 (把端口 fa0/2划分给vlan30 )
+
+end
+
+conf t
+
+vlan 20
+name cisco
+exit
+int vlan 20
+no shut
+int fa0/3
+swtchport mode access
+switchport access vlan 20
+
+end
+
+conf t
+int fa0/2
+switchport mode trunk
+
+do write
