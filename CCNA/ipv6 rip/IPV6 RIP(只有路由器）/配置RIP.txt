@@ -1,0 +1,33 @@
+R1
+IPv6 router rip cisco
+exit
+int s0/0/0
+ipv6 rip cisco enable
+int fa0/0
+ipv6 rip cisco enable
+
+R2
+IPv6 router rip cisco
+exit
+int s0/0/0
+ipv6 rip cisco enable
+int s0/0/1
+ipv6 rip cisco enable
+
+R3
+IPv6 router rip cisco
+exit
+int s0/0/1
+ipv6 rip cisco enable
+exit
+int s0/0/0
+ipv6 rip cisco enable
+
+
+R4
+IPv6 router rip cisco
+exit
+int s0/0/0
+ipv6 rip cisco enable
+int fa0/0
+ipv6 rip cisco enable

@@ -1,0 +1,9 @@
+en
+conf t
+int se0/0/0
+no shut
+ip add 172.16.12.2 255.255.255.0
+
+int se0/0/1
+no shut
+ip add 172.16.23.2 255.255.255.0

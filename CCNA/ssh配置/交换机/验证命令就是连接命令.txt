@@ -1,0 +1,6 @@
+在pc0上，进入command prompt中：
+输入：ssh -l admin 172.17.99.11
+
+
+swith0中的使能密码是：lizheng
+vty密码是 lizheng

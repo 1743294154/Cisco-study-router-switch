@@ -1,0 +1,55 @@
+R1
+
+en
+
+conf t
+
+int se0/0/0
+no shut
+ipv6 add 2013:12::1/64
+int fa0/0
+no shut
+ipv6 add 2013:1::1/64
+exit
+ipv6 unicast-routing
+
+R2
+en
+conf t
+int se0/0/0
+no shut
+ipv6 add 2013:12::2/64
+int se0/0/1
+no shut
+ipv6 add 2013:23::2/64
+exit
+ipv6 unicast-routing
+
+
+R3
+en
+conf t
+
+int se0/0/1
+no shut
+
+ipv6 add 2013:3::3/64
+int se0/0/0
+no shut
+ipv6 add 2013:34::3/64
+exit
+ipv6 unicast-routing
+
+R4
+en
+conf t
+int se0/0/0
+no shut
+ipv6 add 2013:34::4/64
+int fa0/0
+no shut
+ipv6 add 2013:4::4/64
+exit
+ipv6 unicast-routing
+
+

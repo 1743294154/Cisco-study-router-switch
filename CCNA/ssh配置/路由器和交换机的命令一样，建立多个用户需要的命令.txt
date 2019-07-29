@@ -1,0 +1,3 @@
+建立多个用户必须启用aaa认证：
+命令如下：
+在全局模式；如 r2（config）# aaa new-model

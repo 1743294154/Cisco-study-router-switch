@@ -1,0 +1,19 @@
+交换机：
+en
+conf t
+interface fa0/1
+switchport mode access
+switchport port-security
+switchport port-security violation protect 
+switchort port-security mac-address 00D0.9700.1DB0
+write
+
+路由器：
+
+en
+
+conf t
+interface g0/0
+ip address 192.168.1.254 255.255.255.0
+no shutdown 
+write

@@ -1,0 +1,5 @@
+router RIP
+version 2
+network 172.16.0.0
+ip route 0.0.0.0 0.0.0.0 serial0/0/0
+default-information originate

@@ -1,0 +1,12 @@
+en
+config terminal
+interface fa0/1
+switchport mode access
+switchport port-security
+switchport port-security mac-address 00D0.FFEE.107C
+
+end
+
+config terminal
+interface range fa0/2-24   选中fa0/2到fa0/24端口。
+shutdown

@@ -1,0 +1,4 @@
+router	 rip
+version 2
+no auto-summary
+network 172.16.0.0

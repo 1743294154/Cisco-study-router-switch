@@ -1,0 +1,22 @@
+en
+config terminal
+interface vlan 1
+ip address 172.17.99.11 255.255.0.0
+no shut
+do write
+end
+
+
+config terminal
+ip domain-name cisco.com
+hostname s1
+crypto key generate rsa
+
+512
+
+username admin password admin
+
+line vty 0 4
+transport input ssh
+login local
+

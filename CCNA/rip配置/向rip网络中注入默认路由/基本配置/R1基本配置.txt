@@ -1,0 +1,11 @@
+en
+conf t
+interface se0/0/0
+no shut
+ip add 172.16.12.1 255.255.255.0
+int loop 0
+ip add 192.168.41.1 255.255.255.0
+no shut
+
+exit
+
