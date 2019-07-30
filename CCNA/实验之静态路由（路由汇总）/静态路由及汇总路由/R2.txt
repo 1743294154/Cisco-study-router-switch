@@ -1,0 +1,19 @@
+en
+
+conf t
+
+int fa0/1
+ip address 192.168.12.2 255.255.255.0
+no shut
+int fa0/0
+ip address 192.168.23.2 255.255.255.0
+no shut
+
+exit
+
+ip route 192.168.1.0 255.255.255.0 fa0/1
+ip route 192.168.3.0 255.255.255.0 fa0/0
+ip route 0.0.0.0 0.0.0.0 fa0/0
+
+
+do write
