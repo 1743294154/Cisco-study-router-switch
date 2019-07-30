@@ -1,0 +1,23 @@
+Multilayer switch 0£º
+en
+conf t
+interface fa0/21
+no switchport
+ip add 192.168.23.2 255.255.255.0
+no shut
+interface fa0/22
+no switchport
+no shut
+ip add 192.168.13.2 255.255.255.0
+int loop 3
+ip add 192.168.3.1 255.255.255.0
+exit
+
+router eigrp 1
+no auto-summay
+net 192.168.23.0
+net 192.168.3.0
+net 192.168.13.0
+
+do write
+

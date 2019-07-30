@@ -1,0 +1,12 @@
+en
+conf t
+ip routing 
+int fa0/1
+no switchport (关闭这个接口的二层功能，开启三层的功能)
+ip address 192.168.60.254 255.255.255.0
+no shut
+
+int fa0/2
+no switchport 
+ip address 192.168.70.254 255.255.255.0
+no shut

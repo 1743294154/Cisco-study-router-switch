@@ -1,0 +1,40 @@
+三层交换机
+en
+conf t
+int vlan 40
+no shut
+{int fa0/2
+switchport mode access 
+switchport access vlan 40
+exit}（当这个三层交换机开启了路由功能，并且使用了通信协议（比如：ospf  eigrp  rip这种通告协议）就可以不用在三层交换机上
+划一个端口给vlan使用，因为协议（eigrp）通告的时候就让两个vlan互相通信了，因为有路由了，开启路由的命令是ip routing
+但是如果不用到那个协议的话，必须划分一个端口给他才能通信，但是为了不出问题，尽量划一个端口给他。实验1就是用路由协议
+，没有划端口。）
+
+int vlan 50
+no shut
+
+
+int fa0/3
+switchport mode access 
+switchport access vlan 50
+
+ip routing
+
+int vlan 40
+ip address 172.168.40.254 255.255.255.0
+no shut
+
+int vlan 50
+ip address 172.168.50.254 255.255.255.0
+no shut
+
+do write
+
+
+注意：如果实在不通，那么在这个三层交换机上一定要敲
+interface fa0/1
+switchport mode trunk
+(表示所有的vlan都可以通过这个接口进行通信，默认情况下，你在那个二层交换机上让那个fa0/3端口是trunk模式
+，这个接口会协商成trunk模式，但是有些原因可能会使得那trunk模式没有提起成功，所以需要手动敲一次，进行
+排错。)

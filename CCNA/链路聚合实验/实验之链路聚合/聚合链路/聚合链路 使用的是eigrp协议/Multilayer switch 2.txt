@@ -1,0 +1,36 @@
+en
+conf t
+interface rang fa0/23-24
+no switchport
+channel-group 1 mode on  (这个数字1和另外一边的数字要一样)
+int port-channel 1
+no switchport access vlan 1
+ip address 192.168.12.2 255.255.255.0
+exit
+
+
+interface fa0/21
+no switchport
+ip add 192.168.23.1 255.255.255.0
+vlan 2
+exit
+int vlan 2
+ip add 192.168.2.1 255.255.255.0
+no shut
+
+int fa0/1
+switchport mode access
+switchport access vlan 2
+
+
+
+ip routing
+
+router eigrp 1
+no auto-summary
+net 192.168.12.0
+net 192.168.23.0
+net 192.168.2.0
+
+do write
+

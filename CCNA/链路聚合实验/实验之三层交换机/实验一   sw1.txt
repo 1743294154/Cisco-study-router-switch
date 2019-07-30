@@ -1,0 +1,31 @@
+三层交换机：
+en
+conf t
+vlan 10
+name lizheng
+exit
+
+int vlan 10
+ip address 172.168.10.254 255.255.255.0
+no shut
+exit
+int fa0/1
+no shut
+switchport mode access
+switchport access vlan 10    (在这里必须要划一个端口给那个vlan10，因为他需要一个物理接口传送数据)
+
+vlan 30
+name zhengli
+exit
+
+int vlan 30
+ip address 172.168.30.254 255.255.255.0
+no shut
+exit
+
+int fa0/2
+no shut
+switchport mode access
+switchport access vlan 30
+
+ip routing （开启路由功能）

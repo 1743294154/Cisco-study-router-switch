@@ -1,0 +1,23 @@
+¶þ²ã½»»»»ú£ºs2
+en
+conf t
+vlan 40
+li
+exit
+int vlan 40
+no shut
+int fa0/1
+switchport mode access 
+switchport access vlan 40
+exit
+
+int vlan 50
+no shut
+int fa0/2
+switchport mode access
+switchport access vlan 50 
+exit
+int fa03
+switchport mode trunk
+
+do write
