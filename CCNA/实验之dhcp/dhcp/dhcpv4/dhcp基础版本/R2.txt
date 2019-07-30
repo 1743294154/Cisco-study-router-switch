@@ -1,0 +1,48 @@
+基本配置：
+en
+
+conf t
+
+hostname R2
+
+interface g0/1
+no shut
+ip add 192.168.10.254 255.255.255.0
+interface g0/0
+no shut
+ip add 192.168.11.254 255.255.255.0
+interface se0/0/1
+no shut
+ip add 10.1.1.1 255.255.255.252
+exit
+
+协议配置
+router ospf 1
+router-id 1.1.1.1
+network 192.168.10.0 0.0.0.255 area 0
+network 192.168.11.0 0.0.0.255 area 0
+network 10.1.1.0 0.0.0.3  area 0
+exit
+
+dhcp配置
+ip dhcp excluded-address 192.168.10.1 192.168.10.9（排除特定的地址，让dhcp自动分配地址的时候不把他们分配出去）
+ip dhcp excluded-address  192.168.10.254
+ip dhcp pool R1-1（配置dhcpv4池）
+network 192.168.10.0 255.255.255.0
+default-router 192.168.10.254
+dns-server 192.168.11.5
+domin-name example.com(这个命令在packet trace中是敲不进去的，但是在真实的模拟器中能敲进去)
+（domain-name用于定义域名）
+
+
+ip dhcp excluded-address 192.168.11.1 192.168.11.10（排除特定的地址，让dhcp自动分配地址的时候不把他们分配出去）
+ip dhcp excluded-address  192.168.11.254
+ip dhcp pool R1-2（配置dhcpv4池）
+network 192.168.11.0 255.255.255.0
+default-router 192.168.11.254
+dns-server 192.168.11.5
+domin-name example.com
+
+
+所有pc机的ip地址设置为自动获取
+服务器手动配置ip地址，这个ip地址为排除的特殊地址

@@ -1,0 +1,18 @@
+en
+
+conf t
+
+int fa0/0
+ip address 10.10.10.254 255.255.255.0
+no shut
+int se0/0/0
+ip address 202.202.202.2 255.255.255.0
+no shut
+
+
+exit
+
+
+ip route 192.168.0.0 255.255.0.0 se0/0/0     (总结路由)
+
+do write

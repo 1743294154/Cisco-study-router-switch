@@ -1,0 +1,9 @@
+ip  nat inside source static 192.168.1.1 202.202.202.1  (nat地址转换)
+interface se0/1/1
+ip nat inside             （设置进入接口）  
+exit
+interface se0/1/0
+ip nat outside               （设置送出接口）
+exit
+
+ip nat inside source static 192.168.1.2 202.202.202.1

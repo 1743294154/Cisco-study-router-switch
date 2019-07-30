@@ -1,0 +1,17 @@
+基本配置
+en
+conf t
+hostname R1
+int se0/0/1
+no shut
+ip add 10.1.1.2 255.255.255.252
+int se 0/0/0
+no shut
+ip add 10.2.2.1 255.255.255.252
+exit
+
+协议配置
+router ospf 1
+router-id 2.2.2.2
+net 10.1.1.0 0.0.0.3 area 0
+net 10.2.2.0 0.0.0.3 area 0

@@ -1,0 +1,18 @@
+R3:
+en
+conf t
+router ospf 1
+net 192.168.1.0 0.0.0.255 area 0
+net 192.168.2.0 0.0.0.255 area 0
+do write
+
+建院：
+en
+conf t
+ip route 0.0.0.0 0.0.0.0 se0/0/0
+router ospf 1
+net 192.168.2.0 0.0.0.255 area 0
+defalut-information originate (重分布)
+do write
+(注意：在这里为什么用defalut-information originate，而不用redistributed static ? 
+     好像是因为那个ospf的机制的原因，而八个零比较特殊，不能用redistributed static来进行重分布)

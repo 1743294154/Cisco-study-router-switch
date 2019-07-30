@@ -1,0 +1,16 @@
+R1:
+en
+conf t
+router eigrp 1
+no auto-summary
+net 192.168.1.0 0.0.0.255
+net 192.168.2.0 0.0.0.255
+
+工院：
+en
+conf t
+ip route 0.0.0.0 0.0.0.0 se0/0/1
+router eigrp 1
+no auto-summary
+net 192.168.2.0 0.0.0.255
+redistributed static(重分布）

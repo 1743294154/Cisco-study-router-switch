@@ -1,0 +1,13 @@
+en
+conf t
+hostname R3
+int se 0/0/0
+no shut
+ip add 192.168.30.0 255.255.255.0
+exit
+
+–≠“È≈‰÷√
+router ospf 1
+router-id 3.3.3.3
+net 192.168.30.0 255.255.255.0 area 0
+

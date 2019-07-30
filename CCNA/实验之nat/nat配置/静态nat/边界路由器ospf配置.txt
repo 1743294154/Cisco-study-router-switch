@@ -1,0 +1,8 @@
+router ospf 1
+net 192.168.2.0 0.0.0.255 area 0
+exit
+
+ip route 0.0.0.0 0.0.0.0 se0/1/0
+
+router ospf 1
+default-information originate

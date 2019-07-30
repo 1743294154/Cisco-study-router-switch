@@ -1,0 +1,8 @@
+access-list 1 permit 192.168.0.0 0.0.255.255
+in nat inside source list 1 interface se0/1/0 overload
+int g0/0
+ip nat inside
+int se0/1/0
+ip nat outside
+
+ip route 0.0.0.0 0.0.0.0 se0/1/0

@@ -1,0 +1,9 @@
+ip nat pool gongcheng 202.202.202.1 202.202.202.14 netmask 255.255.255.240
+access-list 1 permit 192.168.0.0 0.0.255.255
+ip nat inside source list 1 pool gongcheng
+interface se0/0/0
+ip nat inside
+interface se0/0/1
+ip nat outside
+
+ip route 0.0.0.0 0.0.0.0 se0/0/1（必须要配置这个）

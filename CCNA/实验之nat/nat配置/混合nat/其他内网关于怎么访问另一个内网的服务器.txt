@@ -1,0 +1,22 @@
+其他内网关于怎么访问另一个内网的服务器：
+关于server1的命令：
+首先在边界路由(工院)器上配置：
+（使用静态nat来配置，因为静态nat是一对一的隐射）
+工院：
+ip nat inside source static 192.168.1.10 202.202.202.20
+interface se0/0/0
+ip nat inside
+exit
+interface se 0/0/1
+ip nat outside
+
+server0是用作dns域名服务器
+
+R5:
+ip nat inside source static 192.168.1.3 204.204.204.10
+interface g0/0
+ip nat inside 
+exit
+interface se0/1/0
+ip nat outside
+注意：一定要在server0上开启DNS,在那些pc机上一定要配置dns的地址
